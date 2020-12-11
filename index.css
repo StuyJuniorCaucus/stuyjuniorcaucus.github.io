@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+* {
+	box-sizing: border-box;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow: auto;
+}
+body {
+	background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/45/Stuyvesant_High_School_with_the_World_Trade_Center_in_the_distance.JPG");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+#logo {
+	height: 95vh;
+}
+#logo img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 25em;
+	background-color: #ffffff;
+}
+nav {
+	height: 5vh;
+	max-width: 60em;
+	margin: auto;
+	display: flex;
+	position: sticky;
+	top: 0;
+	background-color: #eee;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1;
+}
+nav a {
+	text-decoration: none;
+	font-style: italic;
+	font-weight: bold;
+	color: black;
+}
+main, footer {
+	max-width: 60em;
+	margin: auto;
+	background-color: #eee;
+	padding: 20px;
+}
