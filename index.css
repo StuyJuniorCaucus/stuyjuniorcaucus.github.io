@@ -51,11 +51,21 @@ main, footer {
 	background-color: #eee;
 	padding: 20px;
 }
-div.bio {
-	align-items: center;
+div.bio_holder {
+	max-width: 100%;
 }
-div.bio > img {
-	max-height: 20vh;
-	float: left;
-	margin: 0.5em;
+div.bio {
+	width: 33%;
+	align-items: center;
+	display: inline-block;
+}
+div.bio > h3 {
+	text-align: center;
+}
+div.portrait > img {
+	position: relative;
+	max-height: 50vh;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
 }
