@@ -69,4 +69,8 @@ div.portrait > img {
   margin-right: 5%;
   width: 90%;
 	object-fit: cover;
+	transform: rotate(0deg);
+}
+p.contact {
+	text-align: center;
 }
