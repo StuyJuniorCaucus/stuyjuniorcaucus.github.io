@@ -64,8 +64,9 @@ div.bio > h3 {
 }
 div.portrait > img {
 	position: relative;
-	max-height: 50vh;
+	height: 40vh;
   margin-left: 5%;
   margin-right: 5%;
   width: 90%;
+	object-fit: cover;
 }
