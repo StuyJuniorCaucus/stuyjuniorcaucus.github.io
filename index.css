@@ -45,6 +45,9 @@ nav a {
 	font-weight: bold;
 	color: black;
 }
+nav a:hover {
+	color: grey;
+}
 main, footer {
 	max-width: 60em;
 	margin: auto;
