@@ -51,7 +51,7 @@ nav a {
 	color: black;
 }
 main, footer {
-	max-width: calc(60em + 20px);
+	max-width: calc(60em + 40px);
 	margin: auto;
 	background-color: #eee;
 	padding: 20px;
