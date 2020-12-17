@@ -51,3 +51,9 @@ main, footer {
 	background-color: #eee;
 	padding: 20px;
 }
+a {
+	color: black;
+}
+a:hover {
+	color: grey;
+}
