@@ -29,7 +29,7 @@ body {
 }
 nav {
 	height: 5vh;
-	max-width: 60em;
+	max-width: calc(60em + 40px);
 	margin: auto;
 	display: flex;
 	position: sticky;
@@ -49,30 +49,39 @@ nav a:hover {
 	color: grey;
 }
 main, footer {
-	max-width: 60em;
+	max-width: calc(60em + 40px);
 	margin: auto;
 	background-color: #eee;
 	padding: 20px;
 }
+h2.title {
+	text-align: center;
+}
 div.bio_holder {
 	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 div.bio {
-	width: 33%;
-	align-items: center;
-	display: inline-block;
+	width: 20em;
 }
 div.bio > h3 {
 	text-align: center;
+	margin: 0;
+}
+div.portrait {
+	margin-top: 10px;
+	width: 100%;
 }
 div.portrait > img {
-	position: relative;
-	height: 40vh;
-	margin-left: 5%;
-	margin-right: 5%;
-	width: 90%;
+	width: 15em;
+	height: 15em;
+	margin-left: 2.5em;
+	margin-right: 2.5em;
 	object-fit: cover;
 	transform: rotate(0deg);
+	border-radius: 50%;
 }
 p.contact {
 	text-align: center;
