@@ -54,6 +54,9 @@ main, footer {
 	background-color: #eee;
 	padding: 20px;
 }
+h1.header {
+	text-align: center;
+}
 h2.title {
 	text-align: center;
 }
