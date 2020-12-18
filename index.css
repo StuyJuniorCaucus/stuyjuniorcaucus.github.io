@@ -57,3 +57,13 @@ a {
 a:hover {
 	color: grey;
 }
+div.form {
+	justify-content: space-around;
+	display: flex;
+	align-items: center;
+	background: white;
+	border-radius: 1em;
+	margin-left: 5em;
+	margin-right: 5em;
+	padding: 1em;
+}
