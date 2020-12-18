@@ -56,6 +56,25 @@ main, footer {
 	background-color: #eee;
 	padding: 20px;
 }
+a {
+	color: black;
+}
+a:hover {
+	color: grey;
+}
+div.form {
+	justify-content: space-around;
+	display: flex;
+	align-items: center;
+	background: white;
+	border-radius: 1em;
+	margin-left: 5em;
+	margin-right: 5em;
+	padding: 1em;
+}
+footer {
+	text-align: center;
+=======
 #columncontainer {
 	display: flex;
 	flex-wrap: wrap;
