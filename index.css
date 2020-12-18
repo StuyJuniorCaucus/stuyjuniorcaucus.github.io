@@ -26,6 +26,7 @@ body {
 	transform: translate(-50%, -50%);
 	max-width: 25em;
 	background-color: #ffffff;
+	border-radius: 50%;
 }
 nav {
 	height: 5vh;
@@ -38,6 +39,10 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	z-index: 1;
+	/* Bottom only:*/
+	box-shadow: 0 2px 2px -2px black;/**/
+	/* All around:
+	box-shadow: 0 0 2px black;*/
 }
 nav a {
 	text-decoration: none;
@@ -46,7 +51,7 @@ nav a {
 	color: black;
 }
 main, footer {
-	max-width: 60em;
+	max-width: calc(60em + 40px);
 	margin: auto;
 	background-color: #eee;
 	padding: 20px;
@@ -69,4 +74,13 @@ div.form {
 }
 footer {
 	text-align: center;
+=======
+#columncontainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.column {
+	flex-basis: 29em;
+	flex-grow: 1;
 }
