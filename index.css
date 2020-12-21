@@ -30,7 +30,7 @@ body {
 }
 nav {
 	height: 5vh;
-	max-width: 60em;
+	max-width: calc(60em + 40px);
 	margin: auto;
 	display: flex;
 	position: sticky;
@@ -50,12 +50,58 @@ nav a {
 	font-weight: bold;
 	color: black;
 }
+nav a:hover {
+	color: grey;
+}
 main, footer {
 	max-width: calc(60em + 40px);
 	margin: auto;
 	background-color: #eee;
 	padding: 20px;
 }
+h1.header {
+	text-align: center;
+}
+h2.title {
+	text-align: center;
+}
+div.bio_holder {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+div.bio {
+	width: 20em;
+}
+div.bio > h3 {
+	text-align: center;
+	margin: 0;
+}
+div.portrait {
+	margin-top: 10px;
+	width: 100%;
+}
+div.portrait > img {
+	width: 15em;
+	height: 15em;
+	margin-left: 2.5em;
+	margin-right: 2.5em;
+	object-fit: cover;
+	transform: rotate(0deg);
+	border-radius: 50%;
+}
+p.contact {
+	text-align: center;
+}
+p.contact > a {
+	text-decoration: none;
+	color: black;
+}
+p.contact > a:hover {
+	text-decoration: none;
+	color: blue;
+=======
 a {
 	color: black;
 }
