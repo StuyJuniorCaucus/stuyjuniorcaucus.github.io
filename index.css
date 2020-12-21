@@ -101,7 +101,7 @@ p.contact > a {
 p.contact > a:hover {
 	text-decoration: none;
 	color: blue;
-=======
+}
 a {
 	color: black;
 }
@@ -120,7 +120,7 @@ div.form {
 }
 footer {
 	text-align: center;
-=======
+}
 #columncontainer {
 	display: flex;
 	flex-wrap: wrap;
