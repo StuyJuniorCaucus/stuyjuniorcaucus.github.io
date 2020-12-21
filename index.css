@@ -101,7 +101,7 @@ p.contact > a {
 p.contact > a:hover {
 	text-decoration: none;
 	color: blue;
-=======
+}
 a {
 	color: black;
 }
@@ -120,7 +120,7 @@ div.form {
 }
 footer {
 	text-align: center;
-=======
+}
 #columncontainer {
 	display: flex;
 	flex-wrap: wrap;
@@ -129,4 +129,27 @@ footer {
 .column {
 	flex-basis: 29em;
 	flex-grow: 1;
+}
+
+
+#search {
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#oppTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+#oppTable th, #oppTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#oppTable tr {
+  border-bottom: 1px solid #ddd;
 }

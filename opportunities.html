@@ -1,41 +1,163 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Stuyvesant High School Junior Caucus</title>
-		<link rel="stylesheet" href="index.css" type="text/css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script type="text/javascript" src="opportunities.js"></script>
-	</head>
-	<body>
-		<nav>
-			<a href="index.html">HOME</a>
-			<a href="about_us.html">ABOUT US</a>
-			<a href="opportunities.html">OPPORTUNITIES</a>
-			<a href="#">SCHOLARSHIPS</a>
-			<a href="#">ACADEMICS</a>
-		</nav>
+<head>
+	<title>Stuyvesant High School Junior Caucus</title>
+	<link rel="stylesheet" href="index.css" type="text/css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="opportunities.js"></script>
+</head>
+<body>
+	<nav>
+		<a href="index.html">HOME</a>
+		<a href="about_us.html">ABOUT US</a>
+		<a href="opportunities.html">OPPORTUNITIES</a>
+		<a href="#">SCHOLARSHIPS</a>
+		<a href="#">ACADEMICS</a>
+	</nav>
+	
+	<main>
+		<h1>Electives List</h1>
+		<input type="text" id="search" onkeyup="filter()" placeholder="Search for course..">
 
-		<main>
-			<h1>Opportunities List</h1>
-			<input type="text" id="search" onkeyup="filter()" placeholder="Search for names..">
+		<table id="oppTable">
+			<tr class="header">
+				<th style="width:40%;">Course</th>
+				<th style="width:30%;">Major</th>
+				<th style="width:30%;">Teacher</th>
+			</tr>
+			<tr>
+				<td>Cancer Research</td>
+				<td>Science</td>
+				<td>Econome</td>
+			</tr>
+			<tr>
+				<td>Geology</td>
+				<td>Science</td>
+				<td>McClellan</td>
+			</tr>
+			<tr>
+				<td>Nutrional Science</td>
+				<td>Science</td>
+				<td>Hill</td>
+			</tr>
+			<tr>
+				<td>Genetics</td>
+				<td>Science</td>
+				<td>Ned</td>
+			</tr>
+			<tr>
+				<td>SciOly</td>
+				<td>Science</td>
+				<td>Thomas</td>
+			</tr>
+			<tr>
+				<td>Civil Law</td>
+				<td>Science</td>
+				<td>Weissman</td>
+			</tr>
+			<tr>
+				<td>Spanish Civil War</td>
+				<td>History</td>
+				<td>Hanna</td>
+			</tr>
+			<tr>
+				<td>NYC History</td>
+				<td>History</td>
+				<td>Sandler</td>
+			</tr>
+			<tr>
+				<td>Modern China</td>
+				<td>History</td>
+				<td>Boericke</td>
+			</tr>
+			<tr>
+				<td>Acting</td>
+				<td>English</td>
+				<td>Sheinman</td>
+			</tr>
+			<tr>
+				<td>Poetry</td>
+				<td>English</td>
+				<td>Moore</td>
+			</tr>
+			<tr>
+				<td>Asian American</td>
+				<td>English</td>
+				<td>Oberfield</td>
+			</tr>
+			<tr>
+				<td>Writers Workshop</td>
+				<td>English</td>
+				<td>Francis</td>
+			</tr>
+			<tr>
+				<td>Black Lives in Literature</td>
+				<td>English</td>
+				<td>Huhn</td>
+			</tr>
+			<tr>
+				<td>Writing to Make Change</td>
+				<td>English</td>
+				<td>Thoms</td>
+			</tr>
+			<tr>
+				<td>Interior Design</td>
+				<td>Technology</td>
+				<td>Griffith</td>
+			</tr>
+			<tr>
+				<td>Painting</td>
+				<td>Art</td>
+				<td>Wrigley</td>
+			</tr>
+			<tr>
+				<td>Animation</td>
+				<td>Technology</td>
+				<td>Dillon</td>
+			</tr>
+			<tr>
+				<td>Comic Art</td>
+				<td>Art</td>
+				<td>Wrigley</td>
+			</tr>
+			<tr>
+				<td>3D Art + Technology</td>
+				<td>Technology</td>
+				<td>Bernstein</td>
+			</tr>
+			<tr>
+				<td>SS Regeneron</td>
+				<td>History</td>
+				<td>Schweitzer</td>
+			</tr>
+			<tr>
+				<td>Forensic Science</td>
+				<td>Science</td>
+				<td>Horenstein</td>
+			</tr>
+		</table>
 
-			<table id="oppTable">
-			  <tr class="header">
-			    <th style="width:60%;">Name</th>
-			    <th style="width:40%;">Other Column</th>
-			  </tr>
-			  <tr>
-			    <td>Thing</td>
-			    <td>Info</td>
-			  </tr>
-			  <tr>
-			    <td>Better Thing</td>
-			    <td>Info</td>
-			  </tr>
-			</table>
-		</main>
-		<footer>
-			This is the footer
-		</footer>
-	</body>
+
+		<h1>Opportunities List</h1>
+		<input type="text" id="search" onkeyup="filter()" placeholder="Search for names..">
+
+		<table id="oppTable">
+			<tr class="header">
+				<th style="width:60%;">Name</th>
+				<th style="width:40%;">Other Column</th>
+			</tr>
+			<tr>
+				<td>Thing</td>
+				<td>Info</td>
+			</tr>
+			<tr>
+				<td>Better Thing</td>
+				<td>Info</td>
+			</tr>
+		</table>
+	</main>
+	<footer>
+		This is the footer
+	</footer>
+</body>
 </html>
