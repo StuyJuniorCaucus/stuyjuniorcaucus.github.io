@@ -129,6 +129,7 @@ footer {
 .column {
 	flex-basis: 29em;
 	flex-grow: 1;
+	padding: 5px;
 }
 
 
