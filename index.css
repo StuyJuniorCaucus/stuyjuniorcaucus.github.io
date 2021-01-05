@@ -133,24 +133,24 @@ footer {
 }
 
 
-#search {
+.search {
   width: 100%;
   padding: 12px 20px 12px 40px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
 }
 
-#oppTable {
+.searchable_table {
   border-collapse: collapse;
   width: 100%;
   border: 1px solid #ddd;
 }
 
-#oppTable th, #oppTable td {
+.searchable_table th, .searchable_table td {
   text-align: left;
   padding: 12px;
 }
 
-#oppTable tr {
+.searchable_table tr {
   border-bottom: 1px solid #ddd;
 }
