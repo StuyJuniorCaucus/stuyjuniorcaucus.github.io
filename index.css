@@ -129,4 +129,27 @@ footer {
 .column {
 	flex-basis: 29em;
 	flex-grow: 1;
+	padding: 5px;
+}
+
+.search {
+  width: 100%;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.searchable_table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.searchable_table th, .searchable_table td {
+  text-align: left;
+  padding: 12px;
+}
+
+.searchable_table tr {
+  border-bottom: 1px solid #ddd;
 }
