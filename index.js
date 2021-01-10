@@ -1,13 +1,17 @@
 window.onload = function(){
-    var elective = document.getElementById("elective_search");
-    var opp = document.getElementById("opp_search");
+    var elective_search = document.getElementById("elective_search");
+    var opp_search = document.getElementById("opp_search");
+    var schol_search = document.getElementById("schol_search")
     var opp_table = document.getElementById("opp_table");
 
-    if(elective) elective.addEventListener("keyup", function(){
+    if(elective_search) elective_search.addEventListener("keyup", function(){
         filter("elective_search", "elective_table");
     });
-    if(opp) opp.addEventListener("keyup", function(){
+    if(opp_search) opp_search.addEventListener("keyup", function(){
             filter("opp_search", "opp_table");
+    });
+    if(schol_search) schol_search.addEventListener("keyup", function(){
+            filter("schol_search", "schol_table");
     });
     if(opp_table) readData(opp_table);
 
