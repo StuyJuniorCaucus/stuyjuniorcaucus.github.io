@@ -16,27 +16,35 @@ window.onload = function(){
 
 function filter(source, target) {
     var input, filter, table, tr, td, i, txtValue;
+
+    //gets input and makes uppercase
     input = document.getElementById(source);
     filter = input.value.toUpperCase();
+
+    //gets table to filter
     table = document.getElementById(target);
     tr = table.getElementsByTagName("tr");
 
-
+    //loop for filtering
     for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
+        td = tr[i].getElementsByTagName("td")[0]; //only searches first column for now, might change later
         if (td) {
             txtValue = td.textContent || td.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) tr[i].style.display = "";
-            else tr[i].style.display = "none";
+            if (txtValue.toUpperCase().indexOf(filter) > -1) tr[i].style.display = ""; //if found, display normally
+            else tr[i].style.display = "none"; // else hide it
         }
     }
 }
 
+
+//gets json data from spreadsheet link
 var spData = null;
 function doData(json) {
     spData = json.feed.entry;
 }
 
+
+//creates table cell
 function drawCell(tr, val) {
     var td = document.createElement("td")
     tr.append(td);
@@ -44,6 +52,7 @@ function drawCell(tr, val) {
     return td;
 }
 
+//create table row
 function drawRow(table, rowData) {
     if (rowData == null) return null;
     if (rowData.length == 0) return null;
@@ -57,11 +66,11 @@ function drawRow(table, rowData) {
     return tr;
 }
 
-
+//creates table
 function readData(parent) {
     var data = spData;
     var rowData = [];
-    for(var r = 1; r < data.length; r++) {
+    for(var r = 0; r < data.length; r++) {
         var cell = data[r]["gs$cell"];
         var val = cell["$t"];
         if (cell.col == 1) {
@@ -69,6 +78,6 @@ function readData(parent) {
             rowData = [];
         }
         if(cell.row != 1) rowData.push(val);
-  }
-  drawRow(parent, rowData);
+    }
+    drawRow(parent, rowData);
 }
