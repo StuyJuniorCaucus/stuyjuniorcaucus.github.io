@@ -3,6 +3,7 @@ window.onload = function(){
     var opp_search = document.getElementById("opp_search");
     var schol_search = document.getElementById("schol_search")
     var opp_table = document.getElementById("opp_table");
+    var schol_table = document.getElementById("schol_table");
 
     if(elective_search) elective_search.addEventListener("keyup", function(){
         filter("elective_search", "elective_table");
@@ -13,8 +14,14 @@ window.onload = function(){
     if(schol_search) schol_search.addEventListener("keyup", function(){
             filter("schol_search", "schol_table");
     });
-    if(opp_table) readData(opp_table);
+    //if(opp_table) readData(opp_table);
+    if(schol_table) readData(schol_table);
 
+}
+
+function validURL(str) {
+  var pattern = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/; // fragment locator
+  return !!pattern.test(str);
 }
 
 
@@ -50,9 +57,17 @@ function doData(json) {
 
 //creates table cell
 function drawCell(tr, val) {
-    var td = document.createElement("td")
+    var td = document.createElement("td");
     tr.append(td);
-    td.append(val);
+    try{
+        new URL(val);
+        var link = document.createElement("a");
+        link.href = val;
+        link.append("Link");
+        td.append(link);
+    }catch(e){
+        td.append(val);
+    }
     return td;
 }
 
