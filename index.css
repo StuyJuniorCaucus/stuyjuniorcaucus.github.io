@@ -162,6 +162,8 @@ form {
 	text-align: left;
 	line-height: 2;
 	font-style: italic;
+	max-width: 30em;
+	width: 100%;
 }
 form button {
 	margin: auto;
@@ -174,4 +176,10 @@ form button {
 form button:hover {
 	color: grey;
 	background-color: rgba(0, 0, 0, 0);
+}
+#sgsearch, #sgtable {
+	display: none;
+}
+form input {
+	width: 100%;
 }
