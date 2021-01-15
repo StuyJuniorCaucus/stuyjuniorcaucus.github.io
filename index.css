@@ -18,7 +18,6 @@ body {
 	background-color: rgba(100,100,100,.5);
   	background-blend-mode: multiply;
 }
-/*frontpage logo design*/
 #logo {
 	height: 95vh;
 }
@@ -29,7 +28,6 @@ body {
 	transform: translate(-50%, -50%);
 	max-width: 25em;
 }
-/*navbar code*/
 nav {
 	height: 5vh;
 	max-width: 100%;
@@ -42,7 +40,7 @@ nav {
 	align-items: center;
 	z-index: 1;
 	/* Bottom only:*/
-	box-shadow: 0 2px 2px -2px black;
+	box-shadow: 0 2px 2px -2px black;/**/
 	/* All around:
 	box-shadow: 0 0 2px black;*/
 }
@@ -56,7 +54,7 @@ nav a:hover {
 	color: grey;
 }
 main, footer {
-	max-width: calc(60em + 40px);
+	max-width: 100%;
 	margin: auto;
 	background-color: #eee;
 	padding: 20px;
@@ -67,7 +65,6 @@ h1.header {
 h2.title {
 	text-align: center;
 }
-/*about us biography code*/
 div.bio_holder {
 	max-width: 100%;
 	display: flex;
@@ -94,7 +91,6 @@ div.portrait > img {
 	transform: rotate(0deg);
 	border-radius: 50%;
 }
-/*about us biography contact code*/
 p.contact {
 	text-align: center;
 }
@@ -112,7 +108,6 @@ a {
 a:hover {
 	color: grey;
 }
-/*bug submission form google form code*/
 div.form {
 	justify-content: space-around;
 	display: flex;
@@ -126,7 +121,6 @@ div.form {
 footer {
 	text-align: center;
 }
-/*searchable_table code*/
 #columncontainer {
 	display: flex;
 	flex-wrap: wrap;
