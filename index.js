@@ -1,21 +1,21 @@
 window.onload = function(){
     var elective_search = document.getElementById("elective_search");
-    var opp_search = document.getElementById("opp_search");
+    var news_search = document.getElementById("news_search");
     var schol_search = document.getElementById("schol_search")
-    var opp_table = document.getElementById("opp_table");
+    var news_table = document.getElementById("news_table");
     var schol_table = document.getElementById("schol_table");
 
     if(elective_search) elective_search.addEventListener("keyup", function(){
         filter("elective_search", "elective_table");
     });
-    if(opp_search) opp_search.addEventListener("keyup", function(){
-            filter("opp_search", "opp_table");
+    if(news_search) news_search.addEventListener("keyup", function(){
+            filter("news_search", "news_table");
     });
     if(schol_search) schol_search.addEventListener("keyup", function(){
             filter("schol_search", "schol_table");
     });
-    //if(opp_table) readData(opp_table);
-    if(schol_table) readData(schol_table);
+    if(news_table) readData(news_table, "https://spreadsheets.google.com/feeds/cells/1CV3tuKXYgO40DXAJJvSr91M7jpNcInhp_-M9hpzS1JA/1/public/values");
+    if(schol_table) readData(schol_table, "https://spreadsheets.google.com/feeds/cells/1BIAyY3s9_GLcCsQBUfdGJPHfN-EsOaPi_Y5ds29fEgI/1/public/values");
 
 }
 
@@ -49,9 +49,13 @@ function filter(source, target) {
 
 
 //gets json data from spreadsheet link
-var spData = null;
+var spData = new Object();
 function doData(json) {
-    spData = json.feed.entry;
+    var data = json.feed.entry;
+    var id = json.feed.id.$t;
+    console.log(data);
+    console.log(id);
+    spData[id] = data;
 }
 
 
@@ -86,8 +90,8 @@ function drawRow(table, rowData) {
 }
 
 //creates table
-function readData(parent) {
-    var data = spData;
+function readData(parent, id) {
+    var data = spData[id];
     var rowData = [];
     for(var r = 0; r < data.length; r++) {
         var cell = data[r]["gs$cell"];
