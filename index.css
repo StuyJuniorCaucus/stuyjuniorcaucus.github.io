@@ -38,7 +38,7 @@ nav {
 	display: flex;
 	position: sticky;
 	top: 0;
-	background-color: #eee;
+	background-color: white;
 	justify-content: space-around;
 	align-items: center;
 	z-index: 1;
@@ -49,8 +49,7 @@ nav {
 }
 nav a {
 	text-decoration: none;
-	font-style: italic;
-	font-weight: bold;
+	font-size: 18px;
 	color: black;
 }
 nav a:hover {
@@ -59,8 +58,12 @@ nav a:hover {
 main, footer {
 	max-width: 100%;
 	margin: auto;
-	background-color: #eee;
+	background-color: white;
 	padding: 20px;
+}
+main {
+	padding-left: 20em;
+	padding-right: 20em;
 }
 /*about us biography markers*/
 h1.header {
