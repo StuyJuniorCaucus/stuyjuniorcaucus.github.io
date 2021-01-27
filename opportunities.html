@@ -23,7 +23,7 @@
 			If you are looking for a specific type or name, the search box may be able to help!</p>
 		<input type="text" class = "search" id="opp_search"  placeholder="Search for name or type...">
 
-		<table class="searchable_table" id="opp_table">
+		<table class="searchable_table" id="opp_table" data-search_id="opp_search" data-filtered_columns="[0, 1]">
 			<tr class="header">
 				<th style="width:20%;">Name</th>
 				<th style="width:10%;">Type</th>
@@ -148,7 +148,7 @@
 		<!-- Scholarships Table-->
 		<h1>Scholarships</h1>
 		<p>Here is a list of scholarships sorted in chronological order of when they are due!</p>
-		<table class="searchable_table">
+		<table class="searchable_table" data-search_id="opp_search" data-filtered_columns="[0]">
 			<tr class="header">
 				<th style="width:20%;">Name</th>
 				<th style="width:30%;">Requirements</th>

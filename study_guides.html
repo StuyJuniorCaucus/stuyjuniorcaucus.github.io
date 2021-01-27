@@ -20,7 +20,7 @@
 			<div id="studyguides">
 				<span id="loadingText">Fetching study guides!</span>
 				<input type="text" id="sgsearch" class="search" placeholder="Search for a study guide">
-				<table id="sgtable" class="searchable_table">
+				<table id="sgtable" class="searchable_table" data-search_id="sgsearch" data-filtered_columns="[0, 1]">
 					<tr>
 						<th>Title</th>
 						<th>Subject</th>
@@ -79,7 +79,7 @@
 
 				document.querySelector("#loadingText").style.display = "none"
 				//TODO: from opportunities.js, change code to not use IDs
-				document.querySelector("#sgsearch").addEventListener("keyup", () => filter("sgsearch", "sgtable"))
+				document.querySelector("#sgsearch").addEventListener("keyup", () => filter(table, document.getElementById("sgsearch")))
 				document.querySelectorAll("#sgsearch, #sgtable").forEach(e => e.style.display = "block")
 			})
 	}
