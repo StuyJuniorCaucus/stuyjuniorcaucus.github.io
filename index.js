@@ -53,8 +53,6 @@ var spData = new Object();
 function doData(json) {
     var data = json.feed.entry;
     var id = json.feed.id.$t;
-    console.log(data);
-    console.log(id);
     spData[id] = data;
 }
 
@@ -62,17 +60,20 @@ function doData(json) {
 //creates table cell
 function drawCell(tr, val) {
     var td = document.createElement("td");
-    tr.append(td);
     try{
         new URL(val);
-        var link = document.createElement("a");
-        link.href = val;
-        link.append("Link");
-        td.append(link);
     }catch(e){
+        tr.append(td);
         td.append(val);
+
+        return td;
     }
-    return td;
+
+    var link = tr.querySelector(".name").querySelector("a");
+    link.href = val;
+
+    return null;
+
 }
 
 //create table row
@@ -84,7 +85,16 @@ function drawRow(table, rowData) {
     table.append(tr);
 
     for(var c = 0; c < rowData.length; c++) {
-        drawCell(tr, rowData[c]);
+        var cell = drawCell(tr, rowData[c]);
+        if(c == 0){
+            var txt = cell.innerHTML;
+            cell.innerHTML = "";
+            cell.classList.add("name")
+
+            var a = document.createElement("a");
+            a.innerHTML = txt;
+            cell.append(a);
+        }
     }
     return tr;
 }
