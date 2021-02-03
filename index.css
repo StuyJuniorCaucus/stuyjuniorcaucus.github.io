@@ -55,17 +55,17 @@ nav a {
 nav a:hover {
 	color: grey;
 }
-footer {
+main, footer {
 	max-width: 100%;
 	margin: auto;
 	background-color: white;
 	padding: 20px;
 }
-/*main {
-	padding-left: 20em;
-	padding-right: 20em;
-}
 /*colored sections in index*/
+main.sectionholder {
+	background-color: white;
+	padding: 0px;
+}
 section {
 	padding-top: 16px;
 	padding-bottom: 16px;
