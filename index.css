@@ -76,6 +76,18 @@ section {
 	flex-basis:29em;
 	flex-grow:1;
 }
+#whiteonblue {
+	background-color:steelblue;
+	color:snow;
+}
+#greyonwhite {
+	background-color:snow;
+	color:dimgrey;
+}
+#blackonlightgrey {
+	background-color:gainsboro;
+	color:black;
+}
 /*about us biography markers*/
 h1.header {
 	text-align: center;
