@@ -55,7 +55,7 @@ nav a {
 nav a:hover {
 	color: grey;
 }
-main, footer {
+footer {
 	max-width: 100%;
 	margin: auto;
 	background-color: white;
@@ -64,8 +64,14 @@ main, footer {
 /*main {
 	padding-left: 20em;
 	padding-right: 20em;
-}*/
+}
 /*colored sections in index*/
+section {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 20em;
+	padding-right: 20em;
+}
 #columncontainer > section {
 	flex-basis:29em;
 	flex-grow:1;
