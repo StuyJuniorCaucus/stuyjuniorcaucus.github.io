@@ -61,13 +61,14 @@ main, footer {
 	background-color: white;
 	padding: 20px;
 }
-main {
+/*main {
 	padding-left: 20em;
 	padding-right: 20em;
-}
+}*/
 /*colored sections in index*/
-section {
-	
+#columncontainer > section {
+	flex-basis:29em;
+	flex-grow:1;
 }
 /*about us biography markers*/
 h1.header {
