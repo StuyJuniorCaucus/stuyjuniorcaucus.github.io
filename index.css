@@ -3,6 +3,7 @@
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
 }
+/*general background markers*/
 html, body {
 	width: 100%;
 	height: 100%;
@@ -15,7 +16,10 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: center;
+	background-color: rgba(100,100,100,.5);
+  	background-blend-mode: multiply;
 }
+/*mainpage logo markers*/
 #logo {
 	height: 95vh;
 }
@@ -25,17 +29,16 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 25em;
-	background-color: #ffffff;
-	border-radius: 50%;
 }
+/*navbar section marker*/
 nav {
 	height: 5vh;
-	max-width: calc(60em + 40px);
+	max-width: 100%;
 	margin: auto;
 	display: flex;
 	position: sticky;
 	top: 0;
-	background-color: #eee;
+	background-color: white;
 	justify-content: space-around;
 	align-items: center;
 	z-index: 1;
@@ -46,31 +49,48 @@ nav {
 }
 nav a {
 	text-decoration: none;
-	font-style: italic;
-	font-weight: bold;
+	font-size: 18px;
 	color: black;
 }
 nav a:hover {
 	color: grey;
 }
-main, footer {
-	max-width: calc(60em + 40px);
+footer {
+	max-width: 100%;
 	margin: auto;
-	background-color: #eee;
+	background-color: white;
 	padding: 20px;
 }
+/*main {
+	padding-left: 20em;
+	padding-right: 20em;
+}
+/*colored sections in index*/
+section {
+	padding-top: 16px;
+	padding-bottom: 16px;
+	padding-left: 20em;
+	padding-right: 20em;
+}
+#columncontainer > section {
+	flex-basis:29em;
+	flex-grow:1;
+}
+/*about us biography markers*/
 h1.header {
 	text-align: center;
 }
 h2.title {
 	text-align: center;
 }
+/*holds a group of biographical data*/
 div.bio_holder {
 	max-width: 100%;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
+/*holds biographical data of 1 person*/
 div.bio {
 	width: 20em;
 }
@@ -78,6 +98,7 @@ div.bio > h3 {
 	text-align: center;
 	margin: 0;
 }
+/*holds their photo*/
 div.portrait {
 	margin-top: 10px;
 	width: 100%;
@@ -91,6 +112,7 @@ div.portrait > img {
 	transform: rotate(0deg);
 	border-radius: 50%;
 }
+/*holds their contact info*/
 p.contact {
 	text-align: center;
 }
@@ -108,6 +130,7 @@ a {
 a:hover {
 	color: grey;
 }
+/*holds google forms*/
 div.form {
 	justify-content: space-around;
 	display: flex;
@@ -118,9 +141,11 @@ div.form {
 	margin-right: 5em;
 	padding: 1em;
 }
+/*footer alignment*/
 footer {
 	text-align: center;
 }
+/*searchable table css*/
 #columncontainer {
 	display: flex;
 	flex-wrap: wrap;
