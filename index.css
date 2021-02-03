@@ -154,3 +154,33 @@ footer {
 .searchable_table tr {
   border-bottom: 1px solid #ddd;
 }
+
+#formcontainer {
+	text-align: center;
+}
+form {
+	display: inline-block;
+	text-align: left;
+	line-height: 2;
+	font-style: italic;
+	max-width: 30em;
+	width: 100%;
+}
+form button {
+	margin: auto;
+	display: block;
+	border: 2px solid black;
+	font-style: italic;
+	font-weight: bold;
+	margin-top: 10px;
+}
+form button:hover {
+	color: grey;
+	background-color: rgba(0, 0, 0, 0);
+}
+#sgsearch, #sgtable {
+	display: none;
+}
+form input {
+	width: 100%;
+}
