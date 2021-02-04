@@ -72,6 +72,16 @@ section {
 	padding-left: 20em;
 	padding-right: 20em;
 }
+@media screen and (max-width: 60em) {
+	/*for mobile*/
+	section {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	#logo > img {
+		max-width: 100%;
+	}
+}
 #columncontainer > section {
 	flex-basis:29em;
 	flex-grow:1;
