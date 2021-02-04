@@ -3,6 +3,9 @@
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
 }
+h1 {
+	font-size: 2em;
+}
 /*general background markers*/
 html, body {
 	width: 100%;
