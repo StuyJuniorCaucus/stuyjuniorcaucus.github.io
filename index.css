@@ -89,6 +89,15 @@ section {
 	flex-basis:29em;
 	flex-grow:1;
 }
+
+@media screen and (min-width: 58em) {
+	/*ensures padding isn't too much when the div elements are side by side*/
+	#columncontainer > section {
+		padding-left: 5em;
+		padding-right: 5em;
+	}
+}
+
 #whiteonblue {
 	background-color:steelblue;
 	color:snow;
