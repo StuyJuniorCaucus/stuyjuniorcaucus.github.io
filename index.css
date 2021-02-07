@@ -110,6 +110,9 @@ section {
 	background-color:gainsboro;
 	color:black;
 }
+th, td {
+	text-align: center;
+}
 /*about us biography markers*/
 h1.header {
 	text-align: center;
