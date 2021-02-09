@@ -6,6 +6,7 @@
 		<link rel='icon' href="assets/logos/favicon.ico" type="image/x-icon"/>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/leizongmin/js-xss/dist/xss.js"></script>
 		<script type="text/javascript" src="opportunities.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
 		<nav>
@@ -16,47 +17,54 @@
 			<a href="study_guides.html">ACADEMICS</a>
 		</nav>
 		<main>
-			<h1>Academics</h1>
-			<p>This page is for academic resources that might be useful to Juniors! Currently, we host study guides. You cann see the ones we have below, or submit one of your own to help out your fellow classmates. Good luck on your tests!</p>
-			<div id="studyguides">
-				<span id="loadingText">Fetching study guides!</span>
-				<input type="text" id="sgsearch" class="search" placeholder="Search for a study guide">
-				<table id="sgtable" class="searchable_table" data-search_id="sgsearch" data-filtered_columns="[0, 1]">
-					<tr>
-						<th>Title</th>
-						<th>Subject</th>
-						<th>Submitted By</th>
-						<th>Link</th>
-					</tr>
-				</table>
+			<div class="centered">
+				<h1>Academics</h1>
+				<p>This page is for academic resources that might be useful to Juniors! Currently, we host study guides. You cann see the ones we have below, or submit one of your own to help out your fellow classmates. Good luck on your tests!</p>
+				<div id="studyguides">
+					<span id="loadingText">Fetching study guides!</span>
+					<input type="text" id="sgsearch" class="search" placeholder="Search for a study guide">
+					<table id="sgtable" class="searchable_table" data-search_id="sgsearch" data-filtered_columns="[0, 1]">
+						<tr>
+							<th>Title</th>
+							<th>Subject</th>
+							<th>Submitted By</th>
+							<th>Link</th>
+						</tr>
+					</table>
+				</div>
 			</div>
-			<h2>Submit your own guide</h2>
-			<p>Use this form to submit your own study guide! It will be sent to us for approval, and if it is approved, you'll be able to see it in the table above. Please use the Bug Reports and Feedback link at the bottom of this page if you have any issues. Please note: while e-mails aren't displayed in the above table, they are still accessable by the general public.</p>
-			<div id="formcontainer">
-				<form action="https://shielded-reaches-80257.herokuapp.com/submit" method="POST">
-					<label>
-						Study Guide Name:<br/>
-						<input type="text" name="title">
-					</label><br/>
-					<label>
-						Study Guide Subject:<br/>
-						<input type="text" name="subject">
-					</label><br/>
-					<label>
-						Your Name:<br/>
-						<input type="text" name="submittedBy">
-					</label><br/>
-					<label>
-						Your Email:<br/>
-						<input type="email" name="email">
-					</label><br/>
-					<label>
-						Study Guide Link:<br/>
-						<input type="url" name="link">
-					</label><br/>
-					<button type="submit">SUBMIT</button>
-				</form>
-			</div>
+			<section class="whiteonblue">
+				<div class="centered">
+					<h2>Submit your own guide</h2>
+					<p>Use this form to submit your own study guide! It will be sent to us for approval, and if it is approved, you'll be able to see it in the table above. Please use the Bug Reports and Feedback link at the bottom of this page if you have any issues. Please note: while e-mails aren't displayed in the above table, they are still accessable by the general public.</p>
+					<div id="formcontainer">
+						<form action="https://shielded-reaches-80257.herokuapp.com/submit" method="POST">
+							<label>
+								Study Guide Name:<br/>
+								<input type="text" name="title">
+							</label><br/>
+							<label>
+								Study Guide Subject:<br/>
+								<input type="text" name="subject">
+							</label><br/>
+							<label>
+								Your Name:<br/>
+								<input type="text" name="submittedBy">
+							</label><br/>
+							<label>
+								Your Email:<br/>
+								<input type="email" name="email">
+							</label><br/>
+							<label>
+								Study Guide Link:<br/>
+								<input type="url" name="link">
+							</label><br/>
+							<button type="submit">SUBMIT</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
 		<footer>
 			Last Updated: 2021/01/11 | Junior Caucus IT | <a href="feedback.html">Bug Reports and Feedback</a>
 		</footer>
