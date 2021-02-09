@@ -12,7 +12,7 @@ window.onload = function(){
 
     if(news_table) readData(news_table, "https://spreadsheets.google.com/feeds/cells/1CV3tuKXYgO40DXAJJvSr91M7jpNcInhp_-M9hpzS1JA/1/public/values");
     if(schol_table) readData(schol_table, "https://spreadsheets.google.com/feeds/cells/1BIAyY3s9_GLcCsQBUfdGJPHfN-EsOaPi_Y5ds29fEgI/1/public/values");
-
+    document.getElementById("defaultOpen").click();
 }
 
 function validURL(str) {
@@ -40,6 +40,20 @@ function filter(table, input) {
 			row.style.display = "none";
 		}
 	})
+}
+
+function openTable(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 
 
