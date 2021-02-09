@@ -3,6 +3,9 @@
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
 }
+h1 {
+	font-size: 2em;
+}
 /*general background markers*/
 html, body {
 	width: 100%;
@@ -32,7 +35,7 @@ body {
 }
 /*navbar section marker*/
 nav {
-	height: 5vh;
+	height: 50px;
 	max-width: 100%;
 	margin: auto;
 	display: flex;
@@ -72,9 +75,43 @@ section {
 	padding-left: 20em;
 	padding-right: 20em;
 }
+@media screen and (max-width: 60em) {
+	/*for mobile*/
+	section {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+	#logo > img {
+		max-width: 100%;
+	}
+}
 #columncontainer > section {
 	flex-basis:29em;
 	flex-grow:1;
+}
+
+@media screen and (min-width: 58em) {
+	/*ensures padding isn't too much when the div elements are side by side*/
+	#columncontainer > section {
+		padding-left: 5em;
+		padding-right: 5em;
+	}
+}
+
+#whiteonblue {
+	background-color:steelblue;
+	color:snow;
+}
+#greyonwhite {
+	background-color:snow;
+	color:dimgrey;
+}
+#blackonlightgrey {
+	background-color:gainsboro;
+	color:black;
+}
+th, td {
+	text-align: center;
 }
 /*about us biography markers*/
 h1.header {
