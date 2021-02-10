@@ -85,6 +85,13 @@ section {
 	max-width: 60em;
 	margin: auto;
 }
+/*keeps width bounded within element box*/
+img.fullhorizontal {
+	width: 100%;
+}
+td {
+	overflow: hidden;
+}
 @media screen and (max-width: 60em) {
 	/*for mobile*/
 	#logo > img {
