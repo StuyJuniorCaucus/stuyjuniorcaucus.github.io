@@ -63,7 +63,7 @@ nav a:hover {
 	align-items: center;
 }
 #navbarHomeHeader {
-	width:70%;
+	width:60%;
 }
 #navbarLinks {
 	width: 40%;
@@ -71,22 +71,28 @@ nav a:hover {
 	display: flex;
 }
 nav > .hamburger {
+	position: absolute;
 	display: none;
-	margin-left: auto;
-	margin-right: 0;
+	right:0px;
 }
 @media screen and (max-width:60em) {
 	nav > .hamburger {
 		display: block;
 	}
+	#navbarHomeHeader {
+		position: absolute;
+		left:0;
+	}
 	#navbarLinks {
+		top: 60px;
 		width: 100%;
 		position: relative;
 		display: block;
-		top:50px;
-		background-color: ghostwhite;
 	}
-	#navbarLinks > a::before {content: '\A'; white-space: pre}
+	#navbarLinks > a {
+		background-color: ghostwhite;
+		display: block;
+	}
 }
 main, footer {
 	width: 100%;
