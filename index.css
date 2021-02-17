@@ -68,6 +68,7 @@ nav a:hover {
 #navbarLinks {
 	width: 40%;
 	justify-content: space-around;
+	display: flex;
 }
 nav > .hamburger {
 	display: none;
@@ -79,9 +80,13 @@ nav > .hamburger {
 		display: block;
 	}
 	#navbarLinks {
-		display: block; 
 		width: 100%;
+		position: relative;
+		display: block;
+		top:50px;
+		background-color: ghostwhite;
 	}
+	#navbarLinks > a::before {content: '\A'; white-space: pre}
 }
 main, footer {
 	width: 100%;
