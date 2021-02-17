@@ -58,9 +58,30 @@ nav a {
 nav a:hover {
 	color: grey;
 }
+#navbarHomeHeader, #navbarLinks {
+	display: inherit;
+	align-items: center;
+}
+#navbarHomeHeader {
+	width:70%;
+}
+#navbarLinks {
+	width: 40%;
+	justify-content: space-around;
+}
 nav > .hamburger {
+	display: none;
 	margin-left: auto;
 	margin-right: 0;
+}
+@media screen and (max-width:60em) {
+	nav > .hamburger {
+		display: block;
+	}
+	#navbarLinks {
+		display: block; 
+		width: 100%;
+	}
 }
 main, footer {
 	width: 100%;
