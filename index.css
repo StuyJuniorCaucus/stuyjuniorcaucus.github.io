@@ -58,10 +58,9 @@ nav a {
 nav a:hover {
 	color: grey;
 }
-.hamburger {
-	position: absolute;
-	right: 0;
-	top: 0;
+nav > .hamburger {
+	margin-left: auto;
+	margin-right: 0;
 }
 main, footer {
 	width: 100%;
