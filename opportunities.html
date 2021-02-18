@@ -10,6 +10,7 @@
 	<script type="text/javascript" src="index.js"></script>
 	<script defer src="https://spreadsheets.google.com/feeds/cells/1BIAyY3s9_GLcCsQBUfdGJPHfN-EsOaPi_Y5ds29fEgI/1/public/values?alt=json-in-script&callback=doData"></script>
 	<script defer src="https://spreadsheets.google.com/feeds/cells/1CV3tuKXYgO40DXAJJvSr91M7jpNcInhp_-M9hpzS1JA/1/public/values?alt=json-in-script&callback=doData"></script>
+	<script defer src="https://spreadsheets.google.com/feeds/cells/1dzuS7BbBPWijDyHVBT9fci5E7olu94YyvM6NoippwPA/1/public/values?alt=json-in-script&callback=doData"></script>
 	<nav>
 		<a href="index.html"><img src = "assets/logos/stuysu.png" style="max-height:30px;"></a>
 		<a href="index.html" style="width:50%">Stuyvesant Junior Caucus</a>
@@ -24,6 +25,7 @@
 		<div class="tab">
 			<button class="tablinks" onclick="openTable(event,'Scholarships')"id="defaultOpen">Scholarships</button>
 			<button class="tablinks" onclick="openTable(event,'Publishers/Magazines/Galleries')">Publishers/Magazines/Galleries</button>
+			<button class="tablinks" onclick="openTable(event,'Competitions')">Competitions</button>
 		</div>
 
 		<!-- Publishers/Magazines/Galleries Table -->
@@ -33,11 +35,10 @@
 				If you are looking for a specific type or name, the search box may be able to help!</p>
 			<input type="text" class = "search" id="news_search"  placeholder="Search for name or type...">
 
-			<table class="searchable_table" id="news_table" data-search_id="news_search" data-filtered_columns="[0, 1]">
+			<table class="searchable_table" id="news_table" data-search_id="news_search" data-filtered_columns="[0, 1]" data-source = "https://spreadsheets.google.com/feeds/cells/1CV3tuKXYgO40DXAJJvSr91M7jpNcInhp_-M9hpzS1JA/1/public/values">
 				<tr class="header">
 					<th style="width:10%;">Name</th>
 					<th style="width:10%;">Type</th>
-					<!-- <th style="width:10%;">Website</th> -->
 					<th style="width:5%;">Age</th>
 					<th style="width:15%;">Location</th>
 					<th style="width:30%;">About</th>
@@ -52,13 +53,27 @@
 			<h1>Scholarships</h1>
 			<p>Here is a list of scholarships sorted in chronological order of when they are due!</p>
 			<input type="text" class = "search" id="schol_search"  placeholder="Search for name or type...">
-			<table class="searchable_table" id="schol_table" data-search_id="schol_search" data-filtered_columns="[0]">
+			<table class="searchable_table" id="schol_table" data-search_id="schol_search" data-filtered_columns="[0]" data-source = "https://spreadsheets.google.com/feeds/cells/1BIAyY3s9_GLcCsQBUfdGJPHfN-EsOaPi_Y5ds29fEgI/1/public/values">
 				<tr class="header">
 					<th style="width:20%;">Name</th>
-					<!-- <th style="width:10%;">Website</th> -->
 					<th style="width:35%;">Requirements</th>
 					<th style="width:40%;">Amount</th>
 					<th style="width:15%;">Deadline</th>
+				</tr>
+
+			</table>
+		</div>
+
+		<!-- Scholarships Table-->
+		<div id="Competitions" class="tabcontent">
+			<h1>Competitions</h1>
+			<p>Here is a list of various competitions by type!</p>
+			<input type="text" class = "search" id="comp_search"  placeholder="Search for name or type...">
+			<table class="searchable_table" id="comp_table" data-search_id="comp_search" data-filtered_columns="[0,2]" data-source = "https://spreadsheets.google.com/feeds/cells/1dzuS7BbBPWijDyHVBT9fci5E7olu94YyvM6NoippwPA/1/public/values">
+				<tr class="header">
+					<th style="width:50%;">Name</th>
+					<th style="width:20%;">Deadline</th>
+					<th style="width:30%;">Type</th>
 				</tr>
 
 			</table>
