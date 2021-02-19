@@ -20,7 +20,7 @@ body {
 	background-attachment: fixed;
 	background-position: center;
 	background-color: rgba(100,100,100,.5);
-		background-blend-mode: multiply;
+	background-blend-mode: multiply;
 }
 /*mainpage logo markers*/
 #logo {
@@ -84,16 +84,17 @@ nav > .hamburger {
 		left:0;
 	}
 	#navbarLinks {
-		top: 50px;
+		top: 52px;
 		max-height:100%;
 		width: 100%;
 		position: relative;
-		display: block;
+		display: flex;
+		flex-wrap: wrap;
 	}
 	#navbarLinks > a {
+		flex-basis: 100%;
 		padding: 14px;
 		background-color: ghostwhite;
-		display: block;
 	}
 }
 main, footer {
