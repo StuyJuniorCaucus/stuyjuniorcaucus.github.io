@@ -5,21 +5,11 @@ window.onload = function(){
 		input.addEventListener("keyup", () => {
 			filter(table, input);
 		});
+        readData(table)
 	});
 
-    var news_table = document.getElementById("news_table");
-    var schol_table = document.getElementById("schol_table");
-
-    if(news_table) readData(news_table, "https://spreadsheets.google.com/feeds/cells/1CV3tuKXYgO40DXAJJvSr91M7jpNcInhp_-M9hpzS1JA/1/public/values");
-    if(schol_table) readData(schol_table, "https://spreadsheets.google.com/feeds/cells/1BIAyY3s9_GLcCsQBUfdGJPHfN-EsOaPi_Y5ds29fEgI/1/public/values");
     document.getElementById("defaultOpen").click();
 }
-
-function validURL(str) {
-  var pattern = /^(?:(?:https?|ftp):\/\/)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/; // fragment locator
-  return !!pattern.test(str);
-}
-
 
 function filter(table, input) {
 	const filter = input.value.toUpperCase();
@@ -98,7 +88,7 @@ function drawRow(table, rowData) {
         if(c == 0){
             var txt = cell.innerHTML;
             cell.innerHTML = "";
-            cell.classList.add("name")
+            cell.classList.add("name");
 
             var a = document.createElement("a");
             a.innerHTML = txt;
@@ -109,7 +99,8 @@ function drawRow(table, rowData) {
 }
 
 //creates table
-function readData(parent, id) {
+function readData(parent) {
+    var id = parent.getAttribute("data-source");
     var data = spData[id];
     var rowData = [];
     for(var r = 0; r < data.length; r++) {
