@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('/assets/css_and_js/navbar/navbar.css');
+
 * {
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
@@ -32,70 +34,6 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 25em;
-}
-/*navbar section marker*/
-nav {
-	height: 50px;
-	max-width: 100%;
-	margin: auto;
-	display: flex;
-	position: sticky;
-	top: 0;
-	background-color: white;
-	justify-content: space-around;
-	align-items: center;
-	z-index: 1;
-	/* Bottom only:*/
-	box-shadow: 0 2px 2px -2px black;/**/
-	/* All around:
-	box-shadow: 0 0 2px black;*/
-}
-nav a {
-	text-decoration: none;
-	font-size: 18px;
-	color: black;
-}
-nav a:hover {
-	color: grey;
-}
-#navbarHomeHeader, #navbarLinks {
-	display: inherit;
-	align-items: center;
-}
-#navbarHomeHeader {
-	width:60%;
-}
-#navbarLinks {
-	width: 40%;
-	justify-content: space-around;
-	display: flex;
-}
-nav > .hamburger {
-	position: absolute;
-	display: none;
-	right:0px;
-}
-@media screen and (max-width:60em) {
-	nav > .hamburger {
-		display: block;
-	}
-	#navbarHomeHeader {
-		position: absolute;
-		left:0;
-	}
-	#navbarLinks {
-		top: 52px;
-		max-height:100%;
-		width: 100%;
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-	}
-	#navbarLinks > a {
-		flex-basis: 100%;
-		padding: 14px;
-		background-color: ghostwhite;
-	}
 }
 main, footer {
 	width: 100%;
