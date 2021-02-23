@@ -48,13 +48,16 @@ nav > .hamburger {
 }
 /*mobile navbar CSS*/
 @media screen and (max-width:60em) {
+	/*shows the hamburger menu when screen is small enough*/
 	nav > .hamburger {
 		display: block;
 	}
+	/*Makes the home page link a static area*/
 	#navbarHomeHeader {
 		position: absolute;
 		left:0;
 	}
+	/*CSS for the links container once the hamburger menu is clicked and revealed*/
 	#navbarLinks {
 		top: 52px;
 		max-height:100%;
@@ -63,6 +66,7 @@ nav > .hamburger {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	/*CSS for the boxes that appear from the hamburger menu*/
 	#navbarLinks > a {
 		flex-basis: 100%;
 		padding: 14px;
