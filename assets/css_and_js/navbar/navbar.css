@@ -66,6 +66,9 @@ nav > .hamburger {
 		display: flex;
 		flex-wrap: wrap;
 	}
+	#navbarLinks.active {
+		display: none;
+	}
 	/*CSS for the boxes that appear from the hamburger menu*/
 	#navbarLinks > a {
 		flex-basis: 100%;
