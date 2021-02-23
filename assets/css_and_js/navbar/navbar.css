@@ -15,31 +15,38 @@ nav {
 	/* All around:
 	box-shadow: 0 0 2px black;*/
 }
+
 nav a {
 	text-decoration: none;
 	font-size: 18px;
 	color: black;
 }
+
 nav a:hover {
 	color: grey;
 }
+/*ID tags that separate the collapsable portions of the navbar*/
 #navbarHomeHeader, #navbarLinks {
 	display: inherit;
 	align-items: center;
 }
+/*percentage occupied by each navbar section*/
 #navbarHomeHeader {
 	width:60%;
 }
+
 #navbarLinks {
 	width: 40%;
 	justify-content: space-around;
 	display: flex;
 }
+/*sets the position of the navbar hamburger menu to a static location*/
 nav > .hamburger {
 	position: absolute;
 	display: none;
 	right:0px;
 }
+/*mobile navbar CSS*/
 @media screen and (max-width:60em) {
 	nav > .hamburger {
 		display: block;
