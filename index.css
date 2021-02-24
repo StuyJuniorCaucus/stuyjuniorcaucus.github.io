@@ -3,6 +3,9 @@
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
 }
+h1 {
+	font-size: 2em;
+}
 /*general background markers*/
 html, body {
 	width: 100%;
@@ -17,7 +20,7 @@ body {
 	background-attachment: fixed;
 	background-position: center;
 	background-color: rgba(100,100,100,.5);
-  	background-blend-mode: multiply;
+		background-blend-mode: multiply;
 }
 /*mainpage logo markers*/
 #logo {
@@ -32,7 +35,7 @@ body {
 }
 /*navbar section marker*/
 nav {
-	height: 5vh;
+	height: 50px;
 	max-width: 100%;
 	margin: auto;
 	display: flex;
@@ -56,10 +59,18 @@ nav a:hover {
 	color: grey;
 }
 main, footer {
-	max-width: 100%;
-	margin: auto;
+	width: 100%;
 	background-color: white;
 	padding: 20px;
+	padding-left: 0;
+	padding-right: 0;
+}
+main.paddedmain {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+main {
+	padding-bottom: 0;
 }
 /*colored sections in index*/
 main.sectionholder {
@@ -69,12 +80,38 @@ main.sectionholder {
 section {
 	padding-top: 16px;
 	padding-bottom: 16px;
-	padding-left: 20em;
-	padding-right: 20em;
 }
-#columncontainer > section {
-	flex-basis:29em;
-	flex-grow:1;
+.centered {
+	max-width: 60em;
+	margin: auto;
+}
+/*keeps width bounded within element box*/
+img.fullhorizontal {
+	width: 100%;
+}
+@media screen and (max-width: 60em) {
+	/*for mobile*/
+	#logo > img {
+		max-width: 100%;
+	}
+	.centered {
+		padding: 1em;
+	}
+}
+.whiteonblue {
+	background-color:steelblue;
+	color:snow;
+}
+.greyonwhite {
+	background-color:snow;
+	color:dimgrey;
+}
+.blackonlightgrey {
+	background-color:gainsboro;
+	color:black;
+}
+th, td {
+	text-align: center;
 }
 /*about us biography markers*/
 h1.header {
@@ -146,7 +183,7 @@ footer {
 	text-align: center;
 }
 /*searchable table css*/
-#columncontainer {
+.columncontainer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -154,30 +191,43 @@ footer {
 .column {
 	flex-basis: 29em;
 	flex-grow: 1;
-	padding: 5px;
 }
-
+@media screen and (min-width: 60em) {
+	.column:first-child {
+		padding-right: 1em;
+	}
+	.column:last-child {
+		padding-left: 1em;
+	}
+}
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+td {
+	word-wrap: break-word;
+}
 .search {
-  width: 100%;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
+	width: 100%;
+	padding: 12px 20px 12px 40px;
+	border: 1px solid #ddd;
+	margin-bottom: 12px;
 }
 
 .searchable_table {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  table-layout: fixed;
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #ddd;
+	table-layout: fixed;
 }
 
 .searchable_table th, .searchable_table td {
-  text-align: left;
-  padding: 12px;
+	text-align: left;
+	padding: 12px;
 }
 
 .searchable_table tr {
-  border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 }
 
 #formcontainer {
@@ -210,27 +260,27 @@ form input {
 	width: 100%;
 }
 .tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	background-color: #f1f1f1;
 }
 .tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 1em;
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 1em;
 }
 .tab button:hover {
-  background-color: #ddd;
+	background-color: #ddd;
 }
 .tab button.active {
-  background-color: #ccc;
+	background-color: #ccc;
 }
 .tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border-top: none;
+	display: none;
+	padding: 6px 12px;
+	border-top: none;
 }
