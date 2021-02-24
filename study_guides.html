@@ -77,12 +77,28 @@
 				const table = document.querySelector("#sgtable")
 
 				res.forEach(guide => {
-					const row = document.createElement("tr");
-					["title", "subject", "submittedby", "link"].forEach(e => {
-						const cell = document.createElement("td")
-						cell.innerText = filterXSS(guide[e])
-						row.appendChild(cell);
-					})
+					const row = document.createElement("tr")
+
+					const title = document.createElement("td")
+					title.innerText = filterXSS(guide["title"])
+
+					const subject = document.createElement("td")
+					subject.innerText = filterXSS(guide["subject"])
+
+					const submittedby = document.createElement("td")
+					submittedby.innerText = filterXSS(guide["submittedby"])
+
+					const link_td = document.createElement("td")
+					const link = document.createElement("a")
+					link.textContent = filterXSS(guide["link"])
+					link.href = filterXSS(guide["link"])
+					link_td.appendChild(link)
+
+					row.appendChild(title);
+					row.appendChild(subject);
+					row.appendChild(submittedby);
+					row.appendChild(link_td)
+
 					table.appendChild(row)
 				})
 
