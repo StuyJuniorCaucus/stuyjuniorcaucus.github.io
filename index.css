@@ -85,6 +85,10 @@ section {
 	max-width: 60em;
 	margin: auto;
 }
+/*keeps width bounded within element box*/
+img.fullhorizontal {
+	width: 100%;
+}
 @media screen and (max-width: 60em) {
 	/*for mobile*/
 	#logo > img {
@@ -196,7 +200,13 @@ footer {
 		padding-left: 1em;
 	}
 }
-
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+td {
+	word-wrap: break-word;
+}
 .search {
 	width: 100%;
 	padding: 12px 20px 12px 40px;
