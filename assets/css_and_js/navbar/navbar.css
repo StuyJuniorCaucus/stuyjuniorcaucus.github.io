@@ -51,19 +51,23 @@ nav a:hover {
 	/*shows the hamburger menu when screen is small enough*/
 	#navbarHamburger {
 		display: block;
+		z-index: 1;
 	}
 	/*Makes the home page link a static area*/
 	#navbarHomeHeader {
 		position: absolute;
+		background-color: white;
+		width: 100%;
+		z-index: 1;
 		left:0;
 	}
 	/*CSS for the links container once the hamburger menu is clicked and revealed*/
 	#navbarLinks {
 		display: none;
-		z-index: -1;
 	}
 	#navbarLinks.active {
 		animation-duration: 1s;
+		animation-timing-function: ease-in-out;
 		animation-name: slideintop;
 		top: 52px;
 		max-height:100%;
@@ -71,17 +75,15 @@ nav a:hover {
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
+		height: max-content;
 	}
 	@keyframes slideintop {
 		from {
-			top: -100%;
-			z-index: -1;
-			color: ghostwhite;
+			top: calc(-100% - 52px);
 		}
 
 		to {
 			top: 52px;
-			z-index: -1;
 		}
 	}
 	/*CSS for the boxes that appear from the hamburger menu*/
