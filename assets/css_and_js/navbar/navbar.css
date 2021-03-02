@@ -62,12 +62,23 @@ nav > .hamburger {
 		display: none;
 	}
 	#navbarLinks.active {
+		animation-duration: 1s;
+		animation-name: slideintop;
 		top: 52px;
 		max-height:100%;
 		width: 100%;
 		position: relative;
 		display: flex;
 		flex-wrap: wrap;
+	}
+	@keyframes slideintop {
+		from {
+			top: -100%;
+		}
+
+		to {
+			top: 52px;
+		}
 	}
 	/*CSS for the boxes that appear from the hamburger menu*/
 	#navbarLinks > a {
