@@ -294,3 +294,7 @@ form input {
 	text-decoration: none;
 	font-size: 1.25em;
 }
+
+.responses > p,li {
+	font-style: italic;
+}
