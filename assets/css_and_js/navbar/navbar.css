@@ -60,6 +60,7 @@ nav a:hover {
 	/*CSS for the links container once the hamburger menu is clicked and revealed*/
 	#navbarLinks {
 		display: none;
+		z-index: -1;
 	}
 	#navbarLinks.active {
 		animation-duration: 1s;
@@ -74,10 +75,13 @@ nav a:hover {
 	@keyframes slideintop {
 		from {
 			top: -100%;
+			z-index: -1;
+			color: ghostwhite;
 		}
 
 		to {
 			top: 52px;
+			z-index: -1;
 		}
 	}
 	/*CSS for the boxes that appear from the hamburger menu*/
@@ -85,5 +89,9 @@ nav a:hover {
 		flex-basis: 100%;
 		padding: 14px;
 		background-color: ghostwhite;
+	}
+	#navbarLinks > a:hover {
+		background-color:steelblue;
+		color:snow;
 	}
 }
