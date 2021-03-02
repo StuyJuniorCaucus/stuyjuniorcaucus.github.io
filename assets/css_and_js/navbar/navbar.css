@@ -41,15 +41,15 @@ nav a:hover {
 	display: flex;
 }
 /*sets the position of the navbar hamburger menu to a static location*/
-nav > .hamburger {
+#navbarHamburger {
 	position: absolute;
 	display: none;
-	right:0px;
+	right:1em;
 }
 /*mobile navbar CSS*/
 @media screen and (max-width:60em) {
 	/*shows the hamburger menu when screen is small enough*/
-	nav > .hamburger {
+	#navbarHamburger {
 		display: block;
 	}
 	/*Makes the home page link a static area*/
