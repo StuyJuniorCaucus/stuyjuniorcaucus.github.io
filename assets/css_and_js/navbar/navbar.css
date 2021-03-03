@@ -1,0 +1,88 @@
+/*navbar section marker*/
+nav {
+	height: 50px;
+	max-width: 100%;
+	margin: auto;
+	display: flex;
+	position: sticky;
+	top: 0;
+	background-color: white;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 1;
+	/* Bottom only:*/
+	box-shadow: 0 2px 2px -2px black;/**/
+	/* All around:
+	box-shadow: 0 0 2px black;*/
+}
+
+nav a {
+	text-decoration: none;
+	font-size: 18px;
+	color: black;
+}
+
+nav a:hover {
+	color: grey;
+}
+/*ID tags that separate the collapsable portions of the navbar*/
+#navbarHomeHeader, #navbarLinks {
+	display: inherit;
+	align-items: center;
+}
+/*percentage occupied by each navbar section*/
+#navbarHomeHeader {
+	width:60%;
+}
+
+#navbarLinks {
+	width: 40%;
+	justify-content: space-around;
+	display: flex;
+}
+/*sets the position of the navbar hamburger menu to a static location*/
+#navbarHamburger {
+	position: absolute;
+	display: none;
+	right:1em;
+}
+/*mobile navbar CSS*/
+@media screen and (max-width:60em) {
+	/*shows the hamburger menu when screen is small enough*/
+	#navbarHamburger {
+		display: block;
+		z-index: 1;
+	}
+	/*Makes the home page link a static area*/
+	#navbarHomeHeader {
+		position: absolute;
+		background-color: white;
+		width: 100%;
+		z-index: 1;
+		left:0;
+	}
+	/*CSS for the links container once the hamburger menu is clicked and revealed*/
+	#navbarLinks {
+		position: relative;
+		top: calc(-100% - 52px);
+		transition: top 0.5s ease;
+		display: flex;
+		flex-wrap: wrap;
+		height: max-content;
+		max-height:100%;
+		width: 100%;
+	}
+	#navbarLinks.active {
+		top: 52px;
+	}
+	/*CSS for the boxes that appear from the hamburger menu*/
+	#navbarLinks > a {
+		flex-basis: 100%;
+		padding: 14px;
+		background-color: ghostwhite;
+	}
+	#navbarLinks > a:hover {
+		background-color:steelblue;
+		color:snow;
+	}
+}
