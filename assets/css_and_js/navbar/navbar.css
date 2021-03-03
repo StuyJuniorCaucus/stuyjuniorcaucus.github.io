@@ -64,7 +64,7 @@ nav a:hover {
 	/*CSS for the links container once the hamburger menu is clicked and revealed*/
 	#navbarLinks {
 		position: relative;
-		top: calc(-100% - 52px);
+		top: calc(-100% - 105px);
 		transition: top 0.5s ease;
 		display: flex;
 		flex-wrap: wrap;
