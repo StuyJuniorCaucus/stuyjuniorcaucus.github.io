@@ -261,3 +261,17 @@ form input {
 	padding: 6px 12px;
 	border-top: none;
 }
+
+.content_list {
+	padding-left: 0;
+}
+
+.content_list > a {
+	display: block;
+	text-decoration: none;
+	font-size: 1.25em;
+}
+
+.responses > p,li {
+	font-style: italic;
+}
