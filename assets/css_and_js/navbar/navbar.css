@@ -63,28 +63,17 @@ nav a:hover {
 	}
 	/*CSS for the links container once the hamburger menu is clicked and revealed*/
 	#navbarLinks {
-		display: none;
-	}
-	#navbarLinks.active {
-		animation-duration: 1s;
-		animation-timing-function: ease-in-out;
-		animation-name: slideintop;
-		top: 52px;
-		max-height:100%;
-		width: 100%;
 		position: relative;
+		top: calc(-100% - 52px);
+		transition: top 0.5s ease;
 		display: flex;
 		flex-wrap: wrap;
 		height: max-content;
+		max-height:100%;
+		width: 100%;
 	}
-	@keyframes slideintop {
-		from {
-			top: calc(-100% - 52px);
-		}
-
-		to {
-			top: 52px;
-		}
+	#navbarLinks.active {
+		top: 52px;
 	}
 	/*CSS for the boxes that appear from the hamburger menu*/
 	#navbarLinks > a {
