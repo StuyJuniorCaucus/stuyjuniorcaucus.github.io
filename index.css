@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('assets/css_and_js/navbar/navbar.css');
-
+/*font changes/default*/
 * {
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
@@ -24,6 +24,7 @@ body {
 	background-color: rgba(100,100,100,.5);
 	background-blend-mode: multiply;
 }
+/*main content container markers*/
 main, footer {
 	width: 100%;
 	background-color: white;
@@ -56,10 +57,6 @@ img.fullhorizontal {
 	width: 100%;
 }
 @media screen and (max-width: 60em) {
-	/*for mobile*/
-	#logo > img {
-		max-width: 100%;
-	}
 	.centered {
 		padding: 1em;
 	}
