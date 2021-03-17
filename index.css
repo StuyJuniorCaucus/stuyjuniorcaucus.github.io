@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('assets/css_and_js/navbar/navbar.css');
-
+/*font changes/default*/
 * {
 	box-sizing: border-box;
 	font-family: 'IBM Plex Sans', sans-serif;
@@ -24,17 +24,7 @@ body {
 	background-color: rgba(100,100,100,.5);
 	background-blend-mode: multiply;
 }
-/*mainpage logo markers*/
-#logo {
-	height: 95vh;
-}
-#logo img {
-	position: relative;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	max-width: 25em;
-}
+/*main content container markers*/
 main, footer {
 	width: 100%;
 	background-color: white;
@@ -49,6 +39,10 @@ main.paddedmain {
 main {
 	padding-bottom: 0;
 }
+/*footer alignment*/
+footer {
+	text-align: center;
+}
 /*colored sections in index*/
 main.sectionholder {
 	background-color: white;
@@ -57,23 +51,6 @@ main.sectionholder {
 section {
 	padding-top: 16px;
 	padding-bottom: 16px;
-}
-.centered {
-	max-width: 60em;
-	margin: auto;
-}
-/*keeps width bounded within element box*/
-img.fullhorizontal {
-	width: 100%;
-}
-@media screen and (max-width: 60em) {
-	/*for mobile*/
-	#logo > img {
-		max-width: 100%;
-	}
-	.centered {
-		padding: 1em;
-	}
 }
 .whiteonblue {
 	background-color:steelblue;
@@ -87,56 +64,22 @@ img.fullhorizontal {
 	background-color:gainsboro;
 	color:black;
 }
-th, td {
-	text-align: center;
+.centered {
+	max-width: 60em;
+	margin: auto;
 }
-/*about us biography markers*/
-h1.header {
-	text-align: center;
+@media screen and (max-width: 60em) {
+	.centered {
+		padding: 1em;
+	}
 }
-h2.title {
-	text-align: center;
-}
-/*holds a group of biographical data*/
-div.bio_holder {
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-}
-/*holds biographical data of 1 person*/
-div.bio {
-	width: 20em;
-}
-div.bio > h3 {
-	text-align: center;
-	margin: 0;
-}
-/*holds their photo*/
-div.portrait {
-	margin-top: 10px;
+/*keeps width bounded within element box*/
+img.fullhorizontal {
 	width: 100%;
 }
-div.portrait > img {
-	width: 15em;
-	height: 15em;
-	margin-left: 2.5em;
-	margin-right: 2.5em;
-	object-fit: cover;
-	transform: rotate(0deg);
-	border-radius: 50%;
-}
-/*holds their contact info*/
-p.contact {
+/*table and link formatting*/
+th, td {
 	text-align: center;
-}
-p.contact > a {
-	text-decoration: none;
-	color: black;
-}
-p.contact > a:hover {
-	text-decoration: none;
-	color: blue;
 }
 a {
 	color: black;
@@ -154,10 +97,6 @@ div.form {
 	margin-left: 5em;
 	margin-right: 5em;
 	padding: 1em;
-}
-/*footer alignment*/
-footer {
-	text-align: center;
 }
 /*searchable table css*/
 .columncontainer {

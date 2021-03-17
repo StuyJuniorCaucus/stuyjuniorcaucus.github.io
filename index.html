@@ -7,6 +7,24 @@
 		<script type="text/javascript" src="index.js"></script>
 		<script type="text/javascript" src="assets/css_and_js/hamburger_menu/hamburger_menu.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			#logo {
+				height: 95vh;
+			}
+			#logo img {
+				position: relative;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				max-width: 25em;
+			}
+			/*mobile css*/
+			@media screen and (max-width: 60em) {
+				#logo > img {
+					max-width: 100%;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<nav>
