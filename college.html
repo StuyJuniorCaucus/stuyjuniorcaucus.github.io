@@ -13,6 +13,7 @@
 
 			}
 		</style>
+		<script type="text/javascript" src="index.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -32,121 +33,125 @@
 		</nav>
 		<main>
 			<section id="greyonwhite">
-				<div class="centered">
-					<h1 class="header">Teacher Recommendation Guidelines</h1>
+				<div class="tab">
+					<button class="tablinks" onclick="openTable(event,'recommendations')"id="defaultOpen">Recommendations</button>
+					<button class="tablinks" onclick="openTable(event,'college_meeting')">College Counselor Meetings</button>
+					<button class="tablinks" onclick="openTable(event,'testing')">Taking the Standardized Tests</button>
+					<button class="tabLinks" onclick="openTable(event, 'advice')">Senior Advice</button>
+				</div>
 
-					<h2>Table of Contents</h2>
-					<ul class = "content_list">
-						<a href="#what_rec">What are teacher recommendations?</a>
-						<a href="#which_teach">Which teachers should I ask?</a>
-						<a href="#how_should">How should I ask for my recommendation?</a>
-						<a href="#when_should">When should I ask for my recommendation?</a>
-						<a href="#what_supp">What are supplemental recommendation letters?</a>
-						<a href="#what_if">What if I do not think I have any teachers to ask for recommendations?</a>
-						<a href="#advice">Class of ‘21’s Advice</a>
-						<a href="#college_meeting">About College Meetings</a>
-						<a href="#testing">About Testing</a>
+				<div class="centered">
 					</ul>
 
-					<div id="what_rec" class="anchor">
-						<h2>What are teacher recommendations?</h2>
-						<p>
-							Part of the college application process requires that you receive teacher recommendations.
-							These are letters written by your teachers that speak to your personality, academic excellence, and performance in a classroom setting.
-							These are essential to showing colleges the kind of person you are apart from your academic transcript and curricular portfolio.
-							Be sure to remember you will likely not be allowed to read teacher recommendation letters that are written for you.
-							This is because students typically waive their right to view their teacher recommendations for better reliability.
-							You will be given a choice between waving your rights and not waving your rights, though it is often recommended to trust your teachers and give them privacy by giving up your ability to read the letters after they are submitted.
-							Colleges will see if you do not waive your rights, so keep that in mind.
-						</p>
-					</div>
-
-					<div id="which_teach" class="anchor">
-						<h2>Which teachers should I ask?</h2>
-						<p>
-							It’s recommended that you ask no more than 2 teachers for recommendation letters. These teachers should come from 2 different core subjects—not necessarily non-core electives—so colleges can view your strengths in multiple fields.
-							It is perfectly acceptable to get two humanities recommendations or two STEM recommendations, though avoid two recommendations from the same subject (i.e. two math recommendations).
-							Your recommendation letter should be made by teachers that you have a strong bond with, such as through your daily participation in their classes, and strong grades.
-							Although it is advised to pick teachers from your Junior year, picking Sophomore year teachers is also completely okay! It is not conventional to ask Freshman year teachers. If you think you had a good relationship with your teacher, and had a good grade in the class, don’t be afraid to ask for a recommendation!
-						</p>
-					</div>
-
-					<div id="how_should" class="anchor">
-						<h2>How should I ask for my recommendation?</h2>
-						<p>
-							This depends on your teachers! Some teachers have grade requirements for their teacher recommendations, some teachers have certain ways they’d like to be asked, etc.
-							The most important thing to remember after you’ve chosen teachers of interest is to stay in close communication with them. Go to office hours! Stay alert for announcements!
-						</p>
-						<p>
-							If your teacher’s preferred method of being asked for a recommendation is through email, we’re here to help! Here’s some advice:
-						</p>
-						<ul>
-							<li>
-								<strong>Ask early!</strong>
-								Now’s a great time to bring up recommendations to your teachers in office hours (if they haven’t already spoken about it).
-								You don’t want to ask too late and have missed your chance!
-							</li>
-							<li>
-								<strong>Respect your teachers!</strong>
-								Even if your teachers follow an unconventional method for teacher recommendations, be sure to listen and respect their choices.
-								Remember, you need them -- not the other way around.
-							</li>
-							<li>
-								<strong>Stay formal!</strong>
-								No matter how casually you converse with your teacher during office hours/class, it is important to ask them for a letter of recommendation formally.
-								You are asking them a favor as their student, not their friend!
-							</li>
+					<div id="recommendations" class="tabcontent">
+						<h1 class="header">Teacher Recommendation Guidelines</h1>
+						<ul class="content_list">
+							<a href="#what_rec">What are teacher recommendations?</a>
+							<a href="#which_teach">Which teachers should I ask?</a>
+							<a href="#how_should">How should I ask for my recommendation?</a>
+							<a href="#when_should">When should I ask for my recommendation?</a>
+							<a href="#what_supp">What are supplemental recommendation letters?</a>
+							<a href="#what_if">What if I do not think I have any teachers to ask for recommendations?</a>
 						</ul>
-						<p>
-							Here is a sample email!
-						</p>
-						<em>
-							Dear Ms. Smith,
-							<br><br>
-							I hope all is well!
-							My name is [ ], and I am a student in your 11th period Art class.
-							Throughout the year, I’ve been enjoying your class and the way I’ve been able to perform as a student in it.
-							One particular moment that stands out to me is when we were completing our watercolor paintings, and I was able to learn how to create new colors with the palettes we were given.
-							I’ve been able to express my creativity and diligence in your class. In addition, I feel as though I’ve been able to share the kind of person I am with you, as the teacher-student relationship we developed is very important to me.
-							Would you be willing to write a college letter of recommendation for me? I value both your time and your class, and I would appreciate it very much.
-							Thank you, and have a wonderful day!
-							<br><br>
-							Best,<br>
-							[ ]
+						<div id="what_rec" class="anchor">
+							<h2>What are teacher recommendations?</h2>
+							<p>
+								Part of the college application process requires that you receive teacher recommendations.
+								These are letters written by your teachers that speak to your personality, academic excellence, and performance in a classroom setting.
+								These are essential to showing colleges the kind of person you are apart from your academic transcript and curricular portfolio.
+								Be sure to remember you will likely not be allowed to read teacher recommendation letters that are written for you.
+								This is because students typically waive their right to view their teacher recommendations for better reliability.
+								You will be given a choice between waving your rights and not waving your rights, though it is often recommended to trust your teachers and give them privacy by giving up your ability to read the letters after they are submitted.
+								Colleges will see if you do not waive your rights, so keep that in mind.
+							</p>
+						</div>
 
-						</em>
+						<div id="which_teach" class="anchor">
+							<h2>Which teachers should I ask?</h2>
+							<p>
+								It’s recommended that you ask no more than 2 teachers for recommendation letters. These teachers should come from 2 different core subjects—not necessarily non-core electives—so colleges can view your strengths in multiple fields.
+								It is perfectly acceptable to get two humanities recommendations or two STEM recommendations, though avoid two recommendations from the same subject (i.e. two math recommendations).
+								Your recommendation letter should be made by teachers that you have a strong bond with, such as through your daily participation in their classes, and strong grades.
+								Although it is advised to pick teachers from your Junior year, picking Sophomore year teachers is also completely okay! It is not conventional to ask Freshman year teachers. If you think you had a good relationship with your teacher, and had a good grade in the class, don’t be afraid to ask for a recommendation!
+							</p>
+						</div>
 
-					</div>
+						<div id="how_should" class="anchor">
+							<h2>How should I ask for my recommendation?</h2>
+							<p>
+								This depends on your teachers! Some teachers have grade requirements for their teacher recommendations, some teachers have certain ways they’d like to be asked, etc.
+								The most important thing to remember after you’ve chosen teachers of interest is to stay in close communication with them. Go to office hours! Stay alert for announcements!
+							</p>
+							<p>
+								If your teacher’s preferred method of being asked for a recommendation is through email, we’re here to help! Here’s some advice:
+							</p>
+							<ul>
+								<li>
+									<strong>Ask early!</strong>
+									Now’s a great time to bring up recommendations to your teachers in office hours (if they haven’t already spoken about it).
+									You don’t want to ask too late and have missed your chance!
+								</li>
+								<li>
+									<strong>Respect your teachers!</strong>
+									Even if your teachers follow an unconventional method for teacher recommendations, be sure to listen and respect their choices.
+									Remember, you need them -- not the other way around.
+								</li>
+								<li>
+									<strong>Stay formal!</strong>
+									No matter how casually you converse with your teacher during office hours/class, it is important to ask them for a letter of recommendation formally.
+									You are asking them a favor as their student, not their friend!
+								</li>
+							</ul>
+							<p>
+								Here is a sample email!
+							</p>
+							<em>
+								Dear Ms. Smith,
+								<br><br>
+								I hope all is well!
+								My name is [ ], and I am a student in your 11th period Art class.
+								Throughout the year, I’ve been enjoying your class and the way I’ve been able to perform as a student in it.
+								One particular moment that stands out to me is when we were completing our watercolor paintings, and I was able to learn how to create new colors with the palettes we were given.
+								I’ve been able to express my creativity and diligence in your class. In addition, I feel as though I’ve been able to share the kind of person I am with you, as the teacher-student relationship we developed is very important to me.
+								Would you be willing to write a college letter of recommendation for me? I value both your time and your class, and I would appreciate it very much.
+								Thank you, and have a wonderful day!
+								<br><br>
+								Best,<br>
+								[ ]
 
-					<div id="when_should" class="anchor">
-						<h2>When should I ask for my recommendation?</h2>
-						<p>
-							Do not feel pressured to ask your teachers for recommendations right now!
-							Many of the teachers—if they have not already done so—will reach out to you to share their protocols on requesting recommendation letters.
-							Generally, students ask for recommendations late into the second semester and a few teachers will not accept requests until the school year is over.
-							Feel free to ask your teachers when an appropriate time to ask would be or wait for them to make an announcement.
-							Again, you do not need to ask your teachers right now. If you want to get on top of your recommendations, the spring is an apt time to ask.
-							Just do not wait until late fall, or you might not get one in time.
-						</p>
+							</em>
 
-					</div>
+						</div>
 
-					<div id="what_supp" class="anchor">
-						<h2>What are supplemental recommendation letters?</h2>
-						<p>
-							If you have worked with adults outside of a specific Stuyvesant class, consider getting a supplemental recommendation letter from them.
-							Requesting supplemental letters works in a similar way to teacher recommendation and can be an additional asset to your application.
-						</p>
-						<p>Adults that might be appropriate to ask for supplemental recommendations from are:</p>
-						<ul>
-							<li>People that you interned under</li>
-							<li>Faculty advisors from Stuyvesant clubs or outside organizations</li>
-							<li>Employers or coaches</li>
-						</ul>
-						<p>Supplemental recommendations are by no means required or expected, so do not feel any pressure to have them. </p>
-					</div>
+						<div id="when_should" class="anchor">
+							<h2>When should I ask for my recommendation?</h2>
+							<p>
+								Do not feel pressured to ask your teachers for recommendations right now!
+								Many of the teachers—if they have not already done so—will reach out to you to share their protocols on requesting recommendation letters.
+								Generally, students ask for recommendations late into the second semester and a few teachers will not accept requests until the school year is over.
+								Feel free to ask your teachers when an appropriate time to ask would be or wait for them to make an announcement.
+								Again, you do not need to ask your teachers right now. If you want to get on top of your recommendations, the spring is an apt time to ask.
+								Just do not wait until late fall, or you might not get one in time.
+							</p>
 
-					<div id="what_if" class="anchor">
+						</div>
+
+						<div id="what_supp" class="anchor">
+							<h2>What are supplemental recommendation letters?</h2>
+							<p>
+								If you have worked with adults outside of a specific Stuyvesant class, consider getting a supplemental recommendation letter from them.
+								Requesting supplemental letters works in a similar way to teacher recommendation and can be an additional asset to your application.
+							</p>
+							<p>Adults that might be appropriate to ask for supplemental recommendations from are:</p>
+							<ul>
+								<li>People that you interned under</li>
+								<li>Faculty advisors from Stuyvesant clubs or outside organizations</li>
+								<li>Employers or coaches</li>
+							</ul>
+							<p>Supplemental recommendations are by no means required or expected, so do not feel any pressure to have them. </p>
+						</div>
+
+						<div id="what_if" class="anchor">
 						<h2>What if I do not think I have any teachers to ask for recommendations?</h2>
 						<p>
 							Whether you were unable to maintain a relationship with your teachers in a remote setting or you are not satisfied with your academic performance in a given class, there is still time in the second semester to show improvement.
@@ -157,8 +162,10 @@
 							Also, your recommendation letters will not make or break your application; you have your extracurriculars, transcript, and personal essays to convey your abilities as a student.
 						</p>
 					</div>
+					</div>
 
-					<div id="advice" class="anchor">
+					<div id="advice" class="tabcontent">
+						<div id="advice" class="anchor">
 						<h2>Class of ‘21’s Advice</h2>
 						<p>
 							We asked the Class of 2021 what their experience was like asking for recommendations this past year…
@@ -434,12 +441,15 @@
 
 
 					</div>
+					</div>
 
-					<div id="college_meeting"  class="anchor">
+					<div id="college_meeting"  class="tabcontent">
+						<h1>College Counselor Meetings</h1>
 						<iframe src="https://docs.google.com/document/d/e/2PACX-1vQV5o5jb6-yrI7Mfz7055VOdH3vfeo5d1m3mDT3WgfutFyoC18HGT3Pm4HqoLQuMPH_pb1omlAEPnMi/pub?embedded=true"></iframe>
 					</div>
 
-					<div id="testing"  class="anchor">
+					<div id="testing"  class="tabcontent">
+						<h1>All About Standardized Testing</h1>
 						<iframe src="https://docs.google.com/document/d/e/2PACX-1vRE90qc4Z7EcCr7qcPj56x9GZ1YquQKskRntKD79_7vPGNhFaigUJnV7Gpr9NHCuuRjA37npnEo7HRH/pub?embedded=true"></iframe>
 					</div>
 
